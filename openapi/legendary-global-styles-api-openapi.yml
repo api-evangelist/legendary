@@ -1,0 +1,239 @@
+openapi: 3.1.0
+info:
+  title: Legendary Entertainment WordPress REST block-directory global-styles API
+  version: wp/v2
+  description: 'Read-oriented content API exposed by legendary.com: the WordPress REST API (namespace wp/v2) serving Legendary Entertainment news posts, pages, media, categories and tags. Derived by API Evangelist from the live route discovery document at https://www.legendary.com/wp-json/wp/v2 . This is the platform API exposed by the marketing site, NOT a documented first-party Legendary developer program. GET collections are publicly readable without authentication; write operations require WordPress Application Password credentials.'
+  contact:
+    name: Legendary Entertainment
+    url: https://www.legendary.com/about/
+servers:
+- url: https://www.legendary.com/wp-json/wp/v2
+  description: Production
+tags:
+- name: global-styles
+paths:
+  /global-styles/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+    get:
+      operationId: getGlobalStylesById
+      summary: GET /global-styles/{id}
+      tags:
+      - global-styles
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/Error'
+        '401':
+          $ref: '#/components/responses/Error'
+        '404':
+          $ref: '#/components/responses/Error'
+    post:
+      operationId: createGlobalStylesById
+      summary: POST /global-styles/{id}
+      tags:
+      - global-styles
+      security:
+      - applicationPassword: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/Error'
+        '401':
+          $ref: '#/components/responses/Error'
+        '404':
+          $ref: '#/components/responses/Error'
+  /global-styles/{parent}/revisions:
+    parameters:
+    - name: parent
+      in: path
+      required: true
+      schema:
+        type: integer
+    get:
+      operationId: getGlobalStylesByParentRevisions
+      summary: GET /global-styles/{parent}/revisions
+      tags:
+      - global-styles
+      parameters:
+      - name: context
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - view
+          - embed
+          - edit
+          default: view
+        description: Scope under which the request is made; determines fields present in response.
+      - name: offset
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Offset the result set by a specific number of items.
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+          default: 1
+        description: Current page of the collection.
+      - name: per_page
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Maximum number of items to be returned in result set.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/Error'
+        '401':
+          $ref: '#/components/responses/Error'
+        '404':
+          $ref: '#/components/responses/Error'
+  /global-styles/{parent}/revisions/{id}:
+    parameters:
+    - name: parent
+      in: path
+      required: true
+      schema:
+        type: integer
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+    get:
+      operationId: getGlobalStylesByParentRevisionsById
+      summary: GET /global-styles/{parent}/revisions/{id}
+      tags:
+      - global-styles
+      parameters:
+      - name: context
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - view
+          - embed
+          - edit
+          default: view
+        description: Scope under which the request is made; determines fields present in response.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/Error'
+        '401':
+          $ref: '#/components/responses/Error'
+        '404':
+          $ref: '#/components/responses/Error'
+  /global-styles/themes/{stylesheet}\[\]\@_\-]+)/variations:
+    parameters:
+    - name: stylesheet
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      operationId: getGlobalStylesThemesByStylesheet}\[\]\@_\-]+Variations
+      summary: GET /global-styles/themes/{stylesheet}\[\]\@_\-]+)/variations
+      tags:
+      - global-styles
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/Error'
+        '401':
+          $ref: '#/components/responses/Error'
+        '404':
+          $ref: '#/components/responses/Error'
+  /global-styles/themes/{stylesheet}?):
+    parameters:
+    - name: stylesheet
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      operationId: getGlobalStylesThemesByStylesheet}?
+      summary: GET /global-styles/themes/{stylesheet}?)
+      tags:
+      - global-styles
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/Error'
+        '401':
+          $ref: '#/components/responses/Error'
+        '404':
+          $ref: '#/components/responses/Error'
+components:
+  schemas:
+    Error:
+      type: object
+      description: WordPress REST API error envelope (not RFC 9457)
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        data:
+          type: object
+          properties:
+            status:
+              type: integer
+  responses:
+    Error:
+      description: WordPress REST error envelope
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: rest_post_invalid_id
+            message: Invalid post ID.
+            data:
+              status: 404
+  securitySchemes:
+    applicationPassword:
+      type: http
+      scheme: basic
+      description: WordPress Application Passwords, advertised by the site at https://www.legendary.com/wp-admin/authorize-application.php
