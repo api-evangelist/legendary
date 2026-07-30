@@ -1,21 +1,485 @@
 aid: legendary
-name: Legendary
-description: 'Legendary is a company surfaced as a portfolio company of accel and added to the API Evangelist
-  network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.'
+name: Legendary Entertainment
+description: >-
+  Legendary Entertainment is a Burbank, California media company that owns, produces and
+  distributes content to worldwide audiences across three divisions: Legendary Pictures
+  (film), Legendary Television and Digital Media, and Legendary Comics. Its productions
+  have grossed more than $20 billion worldwide at the box office, spanning franchises such
+  as Dune, Godzilla and Kong, A Minecraft Movie, Street Fighter, Enola Holmes and Monarch:
+  Legacy of Monsters, with an explicit focus on the fandom demographic. Legendary runs no
+  public developer program and publishes no documented API. It does, however, expose a
+  live, publicly readable WordPress REST API on legendary.com that serves its news posts
+  and its film, television, comics, trailer and digital catalogs as JSON — captured here as
+  a platform-exposed content API rather than a supported product.
 url: https://raw.githubusercontent.com/api-evangelist/legendary/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.legendary.com/wp-content/uploads/2015/06/home-social1.jpg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - accel
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: platform-exposed-content-api
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Consumer
-apis: []
+- Media
+- Entertainment
+- Film
+- Television
+- Comics
+- Content
+- Publishing
+- WordPress
+apis:
+- aid: legendary:legendary-block-directory-api
+  name: Legendary Entertainment block-directory API
+  description: >-
+    The block-directory API from Legendary Entertainment — 1 operation(s) for block-directory.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - block-directory
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-block-directory-api-openapi.yml
+- aid: legendary:legendary-block-patterns-api
+  name: Legendary Entertainment block-patterns API
+  description: The block-patterns API from Legendary Entertainment — 2 operation(s) for block-patterns.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - block-patterns
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-block-patterns-api-openapi.yml
+- aid: legendary:legendary-block-renderer-api
+  name: Legendary Entertainment block-renderer API
+  description: The block-renderer API from Legendary Entertainment — 1 operation(s) for block-renderer.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - block-renderer
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-block-renderer-api-openapi.yml
+- aid: legendary:legendary-block-types-api
+  name: Legendary Entertainment block-types API
+  description: The block-types API from Legendary Entertainment — 3 operation(s) for block-types.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - block-types
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-block-types-api-openapi.yml
+- aid: legendary:legendary-blocks-api
+  name: Legendary Entertainment blocks API
+  description: The blocks API from Legendary Entertainment — 6 operation(s) for blocks.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - blocks
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-blocks-api-openapi.yml
+- aid: legendary:legendary-categories-api
+  name: Legendary Entertainment categories API
+  description: The categories API from Legendary Entertainment — 2 operation(s) for categories.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - categories
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-categories-api-openapi.yml
+- aid: legendary:legendary-comics-api
+  name: Legendary Entertainment comics API
+  description: The comics API from Legendary Entertainment — 6 operation(s) for comics.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - comics
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-comics-api-openapi.yml
+- aid: legendary:legendary-comments-api
+  name: Legendary Entertainment comments API
+  description: The comments API from Legendary Entertainment — 2 operation(s) for comments.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - comments
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-comments-api-openapi.yml
+- aid: legendary:legendary-digital-api
+  name: Legendary Entertainment digital API
+  description: The digital API from Legendary Entertainment — 6 operation(s) for digital.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - digital
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-digital-api-openapi.yml
+- aid: legendary:legendary-film-api
+  name: Legendary Entertainment film API
+  description: The film API from Legendary Entertainment — 6 operation(s) for film.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - film
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-film-api-openapi.yml
+- aid: legendary:legendary-font-collections-api
+  name: Legendary Entertainment font-collections API
+  description: >-
+    The font-collections API from Legendary Entertainment — 2 operation(s) for font-collections.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - font-collections
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-font-collections-api-openapi.yml
+- aid: legendary:legendary-font-families-api
+  name: Legendary Entertainment font-families API
+  description: The font-families API from Legendary Entertainment — 4 operation(s) for font-families.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - font-families
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-font-families-api-openapi.yml
+- aid: legendary:legendary-global-styles-api
+  name: Legendary Entertainment global-styles API
+  description: The global-styles API from Legendary Entertainment — 5 operation(s) for global-styles.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - global-styles
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-global-styles-api-openapi.yml
+- aid: legendary:legendary-grid-filter-api
+  name: Legendary Entertainment grid_filter API
+  description: The grid_filter API from Legendary Entertainment — 2 operation(s) for grid_filter.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - grid_filter
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-grid-filter-api-openapi.yml
+- aid: legendary:legendary-icons-api
+  name: Legendary Entertainment icons API
+  description: The icons API from Legendary Entertainment — 2 operation(s) for icons.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - icons
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-icons-api-openapi.yml
+- aid: legendary:legendary-ldn-api
+  name: Legendary Entertainment ldn API
+  description: The ldn API from Legendary Entertainment — 6 operation(s) for ldn.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - ldn
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-ldn-api-openapi.yml
+- aid: legendary:legendary-media-api
+  name: Legendary Entertainment media API
+  description: The media API from Legendary Entertainment — 4 operation(s) for media.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - media
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-media-api-openapi.yml
+- aid: legendary:legendary-menu-items-api
+  name: Legendary Entertainment menu-items API
+  description: The menu-items API from Legendary Entertainment — 4 operation(s) for menu-items.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - menu-items
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-menu-items-api-openapi.yml
+- aid: legendary:legendary-menu-locations-api
+  name: Legendary Entertainment menu-locations API
+  description: The menu-locations API from Legendary Entertainment — 2 operation(s) for menu-locations.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - menu-locations
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-menu-locations-api-openapi.yml
+- aid: legendary:legendary-menus-api
+  name: Legendary Entertainment menus API
+  description: The menus API from Legendary Entertainment — 2 operation(s) for menus.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - menus
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-menus-api-openapi.yml
+- aid: legendary:legendary-navigation-api
+  name: Legendary Entertainment navigation API
+  description: The navigation API from Legendary Entertainment — 6 operation(s) for navigation.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - navigation
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-navigation-api-openapi.yml
+- aid: legendary:legendary-pages-api
+  name: Legendary Entertainment pages API
+  description: The pages API from Legendary Entertainment — 6 operation(s) for pages.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - pages
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-pages-api-openapi.yml
+- aid: legendary:legendary-pattern-directory-api
+  name: Legendary Entertainment pattern-directory API
+  description: >-
+    The pattern-directory API from Legendary Entertainment — 1 operation(s) for pattern-directory.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - pattern-directory
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-pattern-directory-api-openapi.yml
+- aid: legendary:legendary-plugins-api
+  name: Legendary Entertainment plugins API
+  description: The plugins API from Legendary Entertainment — 2 operation(s) for plugins.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - plugins
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-plugins-api-openapi.yml
+- aid: legendary:legendary-posts-api
+  name: Legendary Entertainment posts API
+  description: The posts API from Legendary Entertainment — 6 operation(s) for posts.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - posts
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-posts-api-openapi.yml
+- aid: legendary:legendary-root-api
+  name: Legendary Entertainment root API
+  description: The root API from Legendary Entertainment — 1 operation(s) for root.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - root
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-root-api-openapi.yml
+- aid: legendary:legendary-search-api
+  name: Legendary Entertainment search API
+  description: The search API from Legendary Entertainment — 1 operation(s) for search.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - search
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-search-api-openapi.yml
+- aid: legendary:legendary-settings-api
+  name: Legendary Entertainment settings API
+  description: The settings API from Legendary Entertainment — 1 operation(s) for settings.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - settings
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-settings-api-openapi.yml
+- aid: legendary:legendary-sidebars-api
+  name: Legendary Entertainment sidebars API
+  description: The sidebars API from Legendary Entertainment — 2 operation(s) for sidebars.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - sidebars
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-sidebars-api-openapi.yml
+- aid: legendary:legendary-socials-api
+  name: Legendary Entertainment socials API
+  description: The socials API from Legendary Entertainment — 4 operation(s) for socials.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - socials
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-socials-api-openapi.yml
+- aid: legendary:legendary-statuses-api
+  name: Legendary Entertainment statuses API
+  description: The statuses API from Legendary Entertainment — 2 operation(s) for statuses.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - statuses
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-statuses-api-openapi.yml
+- aid: legendary:legendary-tags-api
+  name: Legendary Entertainment tags API
+  description: The tags API from Legendary Entertainment — 2 operation(s) for tags.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - tags
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-tags-api-openapi.yml
+- aid: legendary:legendary-taxonomies-api
+  name: Legendary Entertainment taxonomies API
+  description: The taxonomies API from Legendary Entertainment — 2 operation(s) for taxonomies.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - taxonomies
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-taxonomies-api-openapi.yml
+- aid: legendary:legendary-television-api
+  name: Legendary Entertainment television API
+  description: The television API from Legendary Entertainment — 6 operation(s) for television.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - television
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-television-api-openapi.yml
+- aid: legendary:legendary-template-parts-api
+  name: Legendary Entertainment template-parts API
+  description: The template-parts API from Legendary Entertainment — 7 operation(s) for template-parts.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - template-parts
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-template-parts-api-openapi.yml
+- aid: legendary:legendary-templates-api
+  name: Legendary Entertainment templates API
+  description: The templates API from Legendary Entertainment — 7 operation(s) for templates.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - templates
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-templates-api-openapi.yml
+- aid: legendary:legendary-themes-api
+  name: Legendary Entertainment themes API
+  description: The themes API from Legendary Entertainment — 2 operation(s) for themes.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - themes
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-themes-api-openapi.yml
+- aid: legendary:legendary-trailers-api
+  name: Legendary Entertainment trailers API
+  description: The trailers API from Legendary Entertainment — 4 operation(s) for trailers.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - trailers
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-trailers-api-openapi.yml
+- aid: legendary:legendary-types-api
+  name: Legendary Entertainment types API
+  description: The types API from Legendary Entertainment — 2 operation(s) for types.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - types
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-types-api-openapi.yml
+- aid: legendary:legendary-users-api
+  name: Legendary Entertainment users API
+  description: The users API from Legendary Entertainment — 6 operation(s) for users.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - users
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-users-api-openapi.yml
+- aid: legendary:legendary-widget-types-api
+  name: Legendary Entertainment widget-types API
+  description: The widget-types API from Legendary Entertainment — 4 operation(s) for widget-types.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - widget-types
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-widget-types-api-openapi.yml
+- aid: legendary:legendary-widgets-api
+  name: Legendary Entertainment widgets API
+  description: The widgets API from Legendary Entertainment — 2 operation(s) for widgets.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - widgets
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-widgets-api-openapi.yml
+- aid: legendary:legendary-wp-pattern-category-api
+  name: Legendary Entertainment wp_pattern_category API
+  description: >-
+    The wp_pattern_category API from Legendary Entertainment — 2 operation(s) for wp_pattern_category.
+  humanURL: https://www.legendary.com/wp-json/wp/v2
+  baseURL: https://www.legendary.com/wp-json/wp/v2
+  tags:
+  - wp_pattern_category
+  properties:
+  - type: OpenAPI
+    url: openapi/legendary-wp-pattern-category-api-openapi.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,4 +487,39 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://www.legendary.com
+  url: https://www.legendary.com
+- type: About
+  url: https://www.legendary.com/about/
+- type: Blog
+  url: https://www.legendary.com/latest-news/
+- type: BlogRSS
+  url: https://www.legendary.com/feed/
+- type: TermsOfService
+  url: https://www.legendary.com/about/terms/
+- type: PrivacyPolicy
+  url: https://www.legendary.com/about/privacy/
+- type: Authentication
+  url: authentication/legendary-authentication.yml
+- type: Conventions
+  url: conventions/legendary-conventions.yml
+- type: ErrorCatalog
+  url: errors/legendary-problem-types.yml
+- type: DataModel
+  url: data-model/legendary-data-model.yml
+- type: Lifecycle
+  url: lifecycle/legendary-lifecycle.yml
+- type: Conformance
+  url: conformance/legendary-conformance.yml
+- type: MCPServer
+  url: mcp/legendary-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/legendary-llms.txt
+- type: DomainSecurity
+  url: security/legendary-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
