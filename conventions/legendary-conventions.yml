@@ -1,0 +1,98 @@
+generated: '2026-07-19'
+method: derived
+source: >-
+  openapi/legendary-wp-rest-openapi.yml + live response headers from
+  https://www.legendary.com/wp-json/wp/v2/posts
+notes: >-
+  Cross-cutting semantics of the WordPress REST API exposed by legendary.com.
+  These are WordPress platform conventions observed live on Legendary's own host,
+  not a published Legendary developer contract.
+authentication:
+  style: none-for-read
+  read: Public. GET collections and items require no credentials.
+  write: HTTP Basic with WordPress Application Passwords.
+  authorization_endpoint: https://www.legendary.com/wp-admin/authorize-application.php
+  artifact: authentication/legendary-authentication.yml
+idempotency:
+  supported: false
+  notes: >-
+    No idempotency key header or documented replay-safe write contract. GET/HEAD are
+    naturally safe; POST and DELETE carry no dedupe semantics.
+pagination:
+  style: page-number
+  request_params:
+  - name: page
+    default: 1
+    description: 1-based page of the result set
+  - name: per_page
+    default: 10
+    max: 100
+    description: Records per page
+  - name: offset
+    description: Skip the first N records, overriding page
+  - name: order
+    enum: [asc, desc]
+  - name: orderby
+    description: Field to sort by (date, id, title, slug, ...)
+  response_headers:
+  - name: X-WP-Total
+    description: Total records matching the query (observed 295 for /posts)
+  - name: X-WP-TotalPages
+    description: Total pages at the current per_page (observed 148 at per_page=2)
+  - name: Link
+    description: RFC 8288 link header carrying rel="next" / rel="prev"
+  evidence: >-
+    Live GET /wp-json/wp/v2/posts?per_page=2 returned x-wp-total: 295,
+    x-wp-totalpages: 148 and a Link rel="next" header.
+field_selection:
+  supported: true
+  params:
+  - name: _fields
+    description: Comma-separated list limiting the fields returned per record
+  - name: _embed
+    description: Inline embedded resources (author, featured media, terms) via _embedded
+  - name: context
+    enum: [view, embed, edit]
+    description: Response shape; edit requires authentication
+filtering:
+  params:
+  - name: search
+  - name: slug
+  - name: categories
+  - name: tags
+  - name: author
+  - name: after
+  - name: before
+  - name: status
+metadata:
+  supported: true
+  field: meta
+  notes: Custom fields also surfaced under acf (Advanced Custom Fields) and aioseo_* keys.
+hypermedia:
+  supported: true
+  field: _links
+  style: HAL-like link relations on every record; _embedded when _embed is set
+request_tracing:
+  request_id_header: null
+  notes: No request-id / correlation header observed in responses.
+versioning:
+  scheme: uri-path-namespace
+  current: wp/v2
+  discovery: https://www.legendary.com/wp-json/
+  namespaces: [oembed/1.0, wpe/cache-plugin/v1, wpe_sign_on_plugin/v1, aioseo/v1, wp/v2,
+    wp-site-health/v1, wp-block-editor/v1, wp-abilities/v1]
+  artifact: lifecycle/legendary-lifecycle.yml
+error_envelope:
+  format: wordpress-rest
+  rfc9457: false
+  shape: '{code, message, data:{status}}'
+  artifact: errors/legendary-problem-types.yml
+rate_limiting:
+  signaled: false
+  notes: >-
+    No RateLimit / X-RateLimit headers observed. The site is fronted by WP Engine,
+    so unpublished platform-level throttling and edge caching should be assumed.
+cors:
+  access_control_allow_headers: [Authorization, X-WP-Nonce, Content-Disposition, Content-MD5,
+    Content-Type]
+  access_control_expose_headers: [X-WP-Total, X-WP-TotalPages, Link]

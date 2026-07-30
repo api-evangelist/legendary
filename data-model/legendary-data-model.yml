@@ -1,0 +1,95 @@
+generated: '2026-07-19'
+method: derived
+source: >-
+  openapi/legendary-wp-rest-openapi.yml, live GET /wp-json/wp/v2/types, and live
+  record shapes from /wp-json/wp/v2/posts
+notes: >-
+  Entity graph of Legendary Entertainment's published content, derived from the live
+  WordPress content model. Record counts are live X-WP-Total values observed
+  2026-07-19 and will drift.
+entities:
+- name: post
+  route: /posts
+  description: Legendary news / press posts
+  record_count: 295
+  id_field: id
+  key_fields: [id, slug, date, modified, title, content, excerpt, author, categories,
+    tags, featured_media, status, link, meta, acf]
+- name: film
+  route: /film
+  description: Legendary Pictures film titles
+  record_count: 64
+- name: comics
+  route: /comics
+  description: Legendary Comics titles
+  record_count: 52
+- name: television
+  route: /television
+  description: Legendary Television titles
+- name: digital
+  route: /digital
+  description: Legendary Digital Media properties
+  record_count: 4
+- name: trailers
+  route: /trailers
+  description: Trailer assets
+- name: socials
+  route: /socials
+  description: Social channel entries
+- name: ldn
+  route: /ldn
+  description: Legendary Digital Network entries
+  record_count: 7
+- name: page
+  route: /pages
+  description: Static site pages
+- name: attachment
+  route: /media
+  description: Media library assets (images, video)
+  id_field: id
+- name: category
+  route: /categories
+  description: Post taxonomy terms
+- name: tag
+  route: /tags
+  description: Post taxonomy terms
+- name: user
+  route: /users
+  description: Post authors
+relationships:
+- from: post
+  to: user
+  kind: belongs_to
+  via: author
+- from: post
+  to: category
+  kind: has_many
+  via: categories
+- from: post
+  to: tag
+  kind: has_many
+  via: tags
+- from: post
+  to: attachment
+  kind: has_one
+  via: featured_media
+- from: film
+  to: attachment
+  kind: has_one
+  via: featured_media
+- from: comics
+  to: attachment
+  kind: has_one
+  via: featured_media
+- from: television
+  to: attachment
+  kind: has_one
+  via: featured_media
+- from: page
+  to: page
+  kind: belongs_to
+  via: parent
+conventions:
+  id_type: integer
+  hypermedia: every record carries _links; ?_embed inlines author/featured media/terms
+    under _embedded

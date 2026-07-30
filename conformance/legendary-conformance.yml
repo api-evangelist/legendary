@@ -1,0 +1,50 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/legendary-wp-rest-openapi.yml + live probes of https://www.legendary.com
+notes: >-
+  Standards posture of the WordPress REST API exposed by legendary.com. Legendary
+  Entertainment publishes no compliance program, certifications or trust center, so
+  no Compliance pointer is emitted.
+standards:
+- id: openapi-3.1
+  conforms: true
+  evidence: openapi/legendary-wp-rest-openapi.yml derived from the live route discovery document
+- id: rest
+  conforms: true
+  evidence: resource-oriented routes with standard HTTP verbs across 146 paths
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: errors use the WordPress {code,message,data.status} envelope, not application/problem+json
+- id: rfc8288-web-linking
+  conforms: true
+  evidence: Link header carries rel="next"/"prev" on paginated collections
+- id: oauth2
+  conforms: false
+  evidence: no oauth2 security scheme; writes use HTTP Basic Application Passwords
+- id: openid-connect
+  conforms: false
+  evidence: /.well-known/openid-configuration returned 404
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returned 404
+- id: rfc8594-sunset-header
+  conforms: false
+  evidence: no Sunset/Deprecation header or deprecation policy published
+- id: llms-txt
+  conforms: true
+  evidence: https://www.legendary.com/llms.txt returns 200 (All in One SEO v4.9.10)
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key contract on write operations
+- id: pagination
+  conforms: true
+  evidence: page/per_page params with X-WP-Total and X-WP-TotalPages response headers
+- id: cors
+  conforms: true
+  evidence: Access-Control-Expose-Headers advertises X-WP-Total, X-WP-TotalPages, Link
+- id: dnssec
+  conforms: true
+  evidence: security/legendary-domain-security.yml — DNSSEC enabled on legendary.com
+- id: hsts
+  conforms: false
+  evidence: security/legendary-domain-security.yml — no HSTS header on www.legendary.com

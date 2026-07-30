@@ -1,0 +1,44 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Legendary Entertainment WordPress REST API
+  version: 1.0.0
+extends: openapi/legendary-wp-rest-openapi.yml
+actions:
+- target: $.info
+  update:
+    x-apievangelist-provenance: >-
+      Derived from the live WordPress route discovery document at
+      https://www.legendary.com/wp-json/wp/v2 on 2026-07-19. Not a provider-published
+      specification.
+    x-apievangelist-api-class: platform-exposed
+    x-apievangelist-developer-program: false
+- target: $.info
+  update:
+    x-error-format: wordpress-rest
+    x-rfc9457: false
+    x-idempotency: false
+- target: $.paths['/posts'].get
+  update:
+    summary: List Legendary Entertainment news posts
+    description: >-
+      Public, unauthenticated listing of Legendary press and news posts, newest first.
+      Paged via page/per_page with X-WP-Total and X-WP-TotalPages response headers.
+- target: $.paths['/film'].get
+  update:
+    summary: List Legendary Pictures film titles
+    description: Public listing of the Legendary Pictures film slate.
+- target: $.paths['/television'].get
+  update:
+    summary: List Legendary Television titles
+    description: Public listing of the Legendary Television slate.
+- target: $.paths['/comics'].get
+  update:
+    summary: List Legendary Comics titles
+    description: Public listing of the Legendary Comics catalog.
+- target: $.paths['/trailers'].get
+  update:
+    summary: List Legendary trailer entries
+- target: $.paths['/search'].get
+  update:
+    summary: Search across Legendary content types
+    description: Cross-type search over posts, films, television and comics.

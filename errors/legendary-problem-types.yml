@@ -1,0 +1,49 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/legendary-wp-rest-openapi.yml + live probe of https://www.legendary.com/wp-json/wp/v2
+format: wordpress-rest
+rfc9457: false
+notes: >-
+  The WordPress REST API exposed by legendary.com does NOT use RFC 9457
+  application/problem+json. It returns its own JSON error envelope with a string
+  `code`, a human `message`, and a `data` object carrying the HTTP `status`.
+  Envelope shape confirmed against a live 404 response.
+envelope:
+  content_type: application/json
+  fields:
+  - name: code
+    type: string
+    description: Machine-readable WordPress error slug (e.g. rest_post_invalid_id)
+  - name: message
+    type: string
+    description: Human-readable error message
+  - name: data.status
+    type: integer
+    description: HTTP status code repeated in the body
+  example:
+    code: rest_post_invalid_id
+    message: Invalid post ID.
+    data:
+      status: 404
+problems:
+- status: 404
+  code: rest_post_invalid_id
+  title: Invalid post ID.
+  remediation: Request a post id that exists and is published; enumerate ids via GET /posts.
+  evidence: live response from https://www.legendary.com/wp-json/wp/v2/posts/99999999
+  source_operation: openapi/legendary-wp-rest-openapi.yml#getPostsById
+- status: 404
+  code: rest_no_route
+  title: No route was found matching the URL and request method.
+  remediation: Check the route path and HTTP method against the discovery document at /wp-json/wp/v2.
+  evidence: WordPress core REST error contract
+- status: 401
+  code: rest_unauthorized
+  title: Authentication required for this operation.
+  remediation: Supply WordPress Application Password credentials via HTTP Basic authentication.
+  evidence: write operations on the spec carry the applicationPassword security requirement
+- status: 400
+  code: rest_invalid_param
+  title: Invalid parameter(s) supplied.
+  remediation: Validate query parameters against the enum/type constraints declared in the route args.
+  evidence: WordPress core REST parameter validation contract

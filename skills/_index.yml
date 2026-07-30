@@ -1,0 +1,13 @@
+generated: '2026-07-19'
+method: generated
+source: openapi/legendary-wp-rest-openapi.yml
+notes: >-
+  Legendary Entertainment publishes no AGENTS.md or provider-authored agent skills.
+  This skill is generated from the live WordPress REST surface; every operationId is
+  verified present in the referenced spec.
+skills:
+- file: legendary-catalog-lookup.md
+  name: Look up Legendary Entertainment titles and news
+  api: openapi/legendary-wp-rest-openapi.yml
+  operations: [getSearch, getPosts, getPostsById, getFilm, getFilmById, getTelevision,
+    getComics, getComicsById, getTrailers, getMediaById, getTypes]

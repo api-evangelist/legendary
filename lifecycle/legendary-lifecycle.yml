@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: derived
+source: >-
+  live discovery at https://www.legendary.com/wp-json/ and probes of the
+  legendary.com public surface
+notes: >-
+  Legendary Entertainment is a media company and runs no developer program, so it
+  publishes no API versioning policy, deprecation policy, SLA or status page. The
+  versioning below is the WordPress platform namespace observed live. No StatusPage
+  or Deprecation pointer is emitted in apis.yml because neither exists.
+versioning:
+  scheme: uri-path-namespace
+  current: wp/v2
+  discovery: https://www.legendary.com/wp-json/
+  policy_url: null
+  namespaces: [oembed/1.0, wpe/cache-plugin/v1, wpe_sign_on_plugin/v1, aioseo/v1, wp/v2,
+    wp-site-health/v1, wp-block-editor/v1, wp-abilities/v1]
+deprecation:
+  policy_url: null
+  sunset_header: false
+  deprecation_header: false
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+support:
+  developer_support: null
+  general_contact: https://www.legendary.com/about/
+deprecated_operations: []
