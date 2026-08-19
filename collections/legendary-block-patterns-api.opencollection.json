@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Legendary Entertainment WordPress REST block-directory block-patterns API",
+    "version": "wp/v2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "block-patterns",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /block-patterns/categories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/block-patterns/categories"
+          },
+          "docs": "GET /block-patterns/categories"
+        },
+        {
+          "info": {
+            "name": "GET /block-patterns/patterns",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/block-patterns/patterns"
+          },
+          "docs": "GET /block-patterns/patterns"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

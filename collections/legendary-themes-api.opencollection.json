@@ -1,0 +1,55 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Legendary Entertainment WordPress REST block-directory themes API",
+    "version": "wp/v2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "themes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /themes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/themes",
+            "params": [
+              {
+                "name": "status",
+                "value": "",
+                "type": "query",
+                "description": "Limit result set to themes assigned one or more statuses."
+              }
+            ]
+          },
+          "docs": "GET /themes"
+        },
+        {
+          "info": {
+            "name": "GET /themes/{stylesheet}?)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/themes/:stylesheet?)",
+            "params": [
+              {
+                "name": "stylesheet",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "GET /themes/{stylesheet}?)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

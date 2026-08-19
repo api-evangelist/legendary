@@ -1,0 +1,84 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Legendary Entertainment WordPress REST block-directory sidebars API",
+    "version": "wp/v2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "sidebars",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /sidebars",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/sidebars",
+            "params": [
+              {
+                "name": "context",
+                "value": "",
+                "type": "query",
+                "description": "Scope under which the request is made; determines fields present in response."
+              }
+            ]
+          },
+          "docs": "GET /sidebars"
+        },
+        {
+          "info": {
+            "name": "GET /sidebars/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/sidebars/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "context",
+                "value": "",
+                "type": "query",
+                "description": "Scope under which the request is made; determines fields present in response."
+              }
+            ]
+          },
+          "docs": "GET /sidebars/{id}"
+        },
+        {
+          "info": {
+            "name": "POST /sidebars/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.legendary.com/wp-json/wp/v2/sidebars/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "POST /sidebars/{id}"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

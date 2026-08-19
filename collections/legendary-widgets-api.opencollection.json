@@ -1,0 +1,129 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Legendary Entertainment WordPress REST block-directory widgets API",
+    "version": "wp/v2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "widgets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /widgets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/widgets",
+            "params": [
+              {
+                "name": "context",
+                "value": "",
+                "type": "query",
+                "description": "Scope under which the request is made; determines fields present in response."
+              },
+              {
+                "name": "sidebar",
+                "value": "",
+                "type": "query",
+                "description": "The sidebar to return widgets for."
+              }
+            ]
+          },
+          "docs": "GET /widgets"
+        },
+        {
+          "info": {
+            "name": "POST /widgets",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.legendary.com/wp-json/wp/v2/widgets",
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "POST /widgets"
+        },
+        {
+          "info": {
+            "name": "GET /widgets/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/widgets/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "context",
+                "value": "",
+                "type": "query",
+                "description": "Scope under which the request is made; determines fields present in response."
+              }
+            ]
+          },
+          "docs": "GET /widgets/{id}"
+        },
+        {
+          "info": {
+            "name": "POST /widgets/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.legendary.com/wp-json/wp/v2/widgets/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "POST /widgets/{id}"
+        },
+        {
+          "info": {
+            "name": "DELETE /widgets/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.legendary.com/wp-json/wp/v2/widgets/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "DELETE /widgets/{id}"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

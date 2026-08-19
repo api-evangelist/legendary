@@ -1,0 +1,45 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Legendary Entertainment WordPress REST block-directory settings API",
+    "version": "wp/v2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "settings",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/settings"
+          },
+          "docs": "GET /settings"
+        },
+        {
+          "info": {
+            "name": "POST /settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.legendary.com/wp-json/wp/v2/settings",
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "POST /settings"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

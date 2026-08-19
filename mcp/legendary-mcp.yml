@@ -2,18 +2,18 @@ generated: '2026-07-19'
 method: derived
 status: candidate
 source: openapi/legendary-wp-rest-openapi.yml
-notes: >-
-  Legendary Entertainment publishes no official MCP server. This is a CANDIDATE tool
-  surface derived from the read-only, publicly accessible operations of the WordPress
-  REST API on www.legendary.com. Write operations are deliberately excluded: they
-  require WordPress Application Password credentials Legendary does not distribute.
+notes: 'Legendary Entertainment publishes no official MCP server. This is a CANDIDATE tool surface derived
+  from the read-only, publicly accessible operations of the WordPress REST API on www.legendary.com. Write
+  operations are deliberately excluded: they require WordPress Application Password credentials Legendary
+  does not distribute.'
 server:
   name: legendary
   transport: http
   url: null
 tools:
 - name: list_legendary_news
-  description: List Legendary Entertainment news posts, newest first. Supports search, paging and date filters.
+  description: List Legendary Entertainment news posts, newest first. Supports search, paging and date
+    filters.
   source_operation: openapi/legendary-wp-rest-openapi.yml#getPosts
 - name: get_legendary_news_post
   description: Retrieve a single Legendary news post by id.
@@ -45,3 +45,9 @@ tools:
 - name: list_legendary_content_types
   description: List the content types published by legendary.com.
   source_operation: openapi/legendary-wp-rest-openapi.yml#getTypes
+deployment:
+  mode: none
+  verified: derived
+  tools: 11
+  checked: '2026-08-12'
+  source: catalog MCP census

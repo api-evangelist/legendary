@@ -1,0 +1,61 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Legendary Entertainment WordPress REST block-directory menu-locations API",
+    "version": "wp/v2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "menu-locations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /menu-locations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/menu-locations",
+            "params": [
+              {
+                "name": "context",
+                "value": "",
+                "type": "query",
+                "description": "Scope under which the request is made; determines fields present in response."
+              }
+            ]
+          },
+          "docs": "GET /menu-locations"
+        },
+        {
+          "info": {
+            "name": "GET /menu-locations/{location}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/menu-locations/:location",
+            "params": [
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "context",
+                "value": "",
+                "type": "query",
+                "description": "Scope under which the request is made; determines fields present in response."
+              }
+            ]
+          },
+          "docs": "GET /menu-locations/{location}"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

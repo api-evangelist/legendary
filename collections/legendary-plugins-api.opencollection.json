@@ -1,0 +1,135 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Legendary Entertainment WordPress REST block-directory plugins API",
+    "version": "wp/v2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "plugins",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /plugins",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/plugins",
+            "params": [
+              {
+                "name": "context",
+                "value": "",
+                "type": "query",
+                "description": "Scope under which the request is made; determines fields present in response."
+              },
+              {
+                "name": "search",
+                "value": "",
+                "type": "query",
+                "description": "Limit results to those matching a string."
+              },
+              {
+                "name": "status",
+                "value": "",
+                "type": "query",
+                "description": "Limits results to plugins with the given status."
+              }
+            ]
+          },
+          "docs": "GET /plugins"
+        },
+        {
+          "info": {
+            "name": "POST /plugins",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.legendary.com/wp-json/wp/v2/plugins",
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "POST /plugins"
+        },
+        {
+          "info": {
+            "name": "GET /plugins/{plugin}?)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/plugins/:plugin?)",
+            "params": [
+              {
+                "name": "plugin",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "context",
+                "value": "",
+                "type": "query",
+                "description": "Scope under which the request is made; determines fields present in response."
+              }
+            ]
+          },
+          "docs": "GET /plugins/{plugin}?)"
+        },
+        {
+          "info": {
+            "name": "POST /plugins/{plugin}?)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.legendary.com/wp-json/wp/v2/plugins/:plugin?)",
+            "params": [
+              {
+                "name": "plugin",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "POST /plugins/{plugin}?)"
+        },
+        {
+          "info": {
+            "name": "DELETE /plugins/{plugin}?)",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.legendary.com/wp-json/wp/v2/plugins/:plugin?)",
+            "params": [
+              {
+                "name": "plugin",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "DELETE /plugins/{plugin}?)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

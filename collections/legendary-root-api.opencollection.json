@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Legendary Entertainment WordPress REST block-directory root API",
+    "version": "wp/v2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "root",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/",
+            "params": [
+              {
+                "name": "context",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

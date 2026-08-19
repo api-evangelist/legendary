@@ -1,0 +1,166 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Legendary Entertainment WordPress REST block-directory global-styles API",
+    "version": "wp/v2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "global-styles",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /global-styles/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/global-styles/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "GET /global-styles/{id}"
+        },
+        {
+          "info": {
+            "name": "POST /global-styles/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.legendary.com/wp-json/wp/v2/global-styles/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "POST /global-styles/{id}"
+        },
+        {
+          "info": {
+            "name": "GET /global-styles/{parent}/revisions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/global-styles/:parent/revisions",
+            "params": [
+              {
+                "name": "parent",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "context",
+                "value": "",
+                "type": "query",
+                "description": "Scope under which the request is made; determines fields present in response."
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "Offset the result set by a specific number of items."
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "Current page of the collection."
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of items to be returned in result set."
+              }
+            ]
+          },
+          "docs": "GET /global-styles/{parent}/revisions"
+        },
+        {
+          "info": {
+            "name": "GET /global-styles/{parent}/revisions/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/global-styles/:parent/revisions/:id",
+            "params": [
+              {
+                "name": "parent",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "context",
+                "value": "",
+                "type": "query",
+                "description": "Scope under which the request is made; determines fields present in response."
+              }
+            ]
+          },
+          "docs": "GET /global-styles/{parent}/revisions/{id}"
+        },
+        {
+          "info": {
+            "name": "GET /global-styles/themes/{stylesheet}\\[\\]\\@_\\-]+)/variations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/global-styles/themes/:stylesheet\\[\\]\\@_\\-]+)/variations",
+            "params": [
+              {
+                "name": "stylesheet",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "GET /global-styles/themes/{stylesheet}\\[\\]\\@_\\-]+)/variations"
+        },
+        {
+          "info": {
+            "name": "GET /global-styles/themes/{stylesheet}?)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/global-styles/themes/:stylesheet?)",
+            "params": [
+              {
+                "name": "stylesheet",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "GET /global-styles/themes/{stylesheet}?)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,77 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Legendary Entertainment WordPress REST block-directory block-renderer API",
+    "version": "wp/v2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "block-renderer",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /block-renderer/{name}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/block-renderer/:name",
+            "params": [
+              {
+                "name": "name",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "attributes",
+                "value": "",
+                "type": "query",
+                "description": "Attributes for the block."
+              },
+              {
+                "name": "context",
+                "value": "",
+                "type": "query",
+                "description": "Scope under which the request is made; determines fields present in response."
+              },
+              {
+                "name": "post_id",
+                "value": "",
+                "type": "query",
+                "description": "ID of the post context."
+              }
+            ]
+          },
+          "docs": "GET /block-renderer/{name}"
+        },
+        {
+          "info": {
+            "name": "POST /block-renderer/{name}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.legendary.com/wp-json/wp/v2/block-renderer/:name",
+            "params": [
+              {
+                "name": "name",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "POST /block-renderer/{name}"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

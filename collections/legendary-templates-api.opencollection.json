@@ -1,0 +1,377 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Legendary Entertainment WordPress REST block-directory templates API",
+    "version": "wp/v2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "templates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /templates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/templates",
+            "params": [
+              {
+                "name": "area",
+                "value": "",
+                "type": "query",
+                "description": "Limit to the specified template part area."
+              },
+              {
+                "name": "context",
+                "value": "",
+                "type": "query",
+                "description": "Scope under which the request is made; determines fields present in response."
+              },
+              {
+                "name": "post_type",
+                "value": "",
+                "type": "query",
+                "description": "Post type to get the templates for."
+              },
+              {
+                "name": "wp_id",
+                "value": "",
+                "type": "query",
+                "description": "Limit to the specified post id."
+              }
+            ]
+          },
+          "docs": "GET /templates"
+        },
+        {
+          "info": {
+            "name": "POST /templates",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.legendary.com/wp-json/wp/v2/templates",
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "POST /templates"
+        },
+        {
+          "info": {
+            "name": "GET /templates/{id}?)[\\/\\w%-]+)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/templates/:id?)[\\/\\w%-]+)",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "context",
+                "value": "",
+                "type": "query",
+                "description": "Scope under which the request is made; determines fields present in response."
+              }
+            ]
+          },
+          "docs": "GET /templates/{id}?)[\\/\\w%-]+)"
+        },
+        {
+          "info": {
+            "name": "POST /templates/{id}?)[\\/\\w%-]+)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.legendary.com/wp-json/wp/v2/templates/:id?)[\\/\\w%-]+)",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "POST /templates/{id}?)[\\/\\w%-]+)"
+        },
+        {
+          "info": {
+            "name": "DELETE /templates/{id}?)[\\/\\w%-]+)",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.legendary.com/wp-json/wp/v2/templates/:id?)[\\/\\w%-]+)",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "DELETE /templates/{id}?)[\\/\\w%-]+)"
+        },
+        {
+          "info": {
+            "name": "GET /templates/{id}?)[\\/\\w%-]+)/autosaves",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/templates/:id?)[\\/\\w%-]+)/autosaves",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "context",
+                "value": "",
+                "type": "query",
+                "description": "Scope under which the request is made; determines fields present in response."
+              }
+            ]
+          },
+          "docs": "GET /templates/{id}?)[\\/\\w%-]+)/autosaves"
+        },
+        {
+          "info": {
+            "name": "POST /templates/{id}?)[\\/\\w%-]+)/autosaves",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.legendary.com/wp-json/wp/v2/templates/:id?)[\\/\\w%-]+)/autosaves",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "POST /templates/{id}?)[\\/\\w%-]+)/autosaves"
+        },
+        {
+          "info": {
+            "name": "GET /templates/{parent}?)[\\/\\w%-]+)/autosaves/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/templates/:parent?)[\\/\\w%-]+)/autosaves/:id",
+            "params": [
+              {
+                "name": "parent",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "context",
+                "value": "",
+                "type": "query",
+                "description": "Scope under which the request is made; determines fields present in response."
+              }
+            ]
+          },
+          "docs": "GET /templates/{parent}?)[\\/\\w%-]+)/autosaves/{id}"
+        },
+        {
+          "info": {
+            "name": "GET /templates/{parent}?)[\\/\\w%-]+)/revisions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/templates/:parent?)[\\/\\w%-]+)/revisions",
+            "params": [
+              {
+                "name": "parent",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "context",
+                "value": "",
+                "type": "query",
+                "description": "Scope under which the request is made; determines fields present in response."
+              },
+              {
+                "name": "exclude",
+                "value": "",
+                "type": "query",
+                "description": "Ensure result set excludes specific IDs."
+              },
+              {
+                "name": "include",
+                "value": "",
+                "type": "query",
+                "description": "Limit result set to specific IDs."
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "Offset the result set by a specific number of items."
+              },
+              {
+                "name": "order",
+                "value": "",
+                "type": "query",
+                "description": "Order sort attribute ascending or descending."
+              },
+              {
+                "name": "orderby",
+                "value": "",
+                "type": "query",
+                "description": "Sort collection by object attribute."
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "Current page of the collection."
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of items to be returned in result set."
+              },
+              {
+                "name": "search",
+                "value": "",
+                "type": "query",
+                "description": "Limit results to those matching a string."
+              }
+            ]
+          },
+          "docs": "GET /templates/{parent}?)[\\/\\w%-]+)/revisions"
+        },
+        {
+          "info": {
+            "name": "GET /templates/{parent}?)[\\/\\w%-]+)/revisions/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/templates/:parent?)[\\/\\w%-]+)/revisions/:id",
+            "params": [
+              {
+                "name": "parent",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "context",
+                "value": "",
+                "type": "query",
+                "description": "Scope under which the request is made; determines fields present in response."
+              }
+            ]
+          },
+          "docs": "GET /templates/{parent}?)[\\/\\w%-]+)/revisions/{id}"
+        },
+        {
+          "info": {
+            "name": "DELETE /templates/{parent}?)[\\/\\w%-]+)/revisions/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.legendary.com/wp-json/wp/v2/templates/:parent?)[\\/\\w%-]+)/revisions/:id",
+            "params": [
+              {
+                "name": "parent",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "DELETE /templates/{parent}?)[\\/\\w%-]+)/revisions/{id}"
+        },
+        {
+          "info": {
+            "name": "GET /templates/lookup",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.legendary.com/wp-json/wp/v2/templates/lookup",
+            "params": [
+              {
+                "name": "is_custom",
+                "value": "",
+                "type": "query",
+                "description": "Indicates if a template is custom or part of the template hierarchy"
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "query",
+                "description": "The slug of the template to get the fallback for"
+              },
+              {
+                "name": "template_prefix",
+                "value": "",
+                "type": "query",
+                "description": "The template prefix for the created template. This is used to extract the main template type, e.g. in `taxonomy-books` extracts the `taxonomy`"
+              }
+            ]
+          },
+          "docs": "GET /templates/lookup"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
