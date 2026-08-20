@@ -93,6 +93,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Blocks
+  tags_raw:
   - blocks
   properties:
   - type: OpenAPI
@@ -103,6 +105,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Categories
+  tags_raw:
   - categories
   properties:
   - type: OpenAPI
@@ -113,6 +117,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Comics
+  tags_raw:
   - comics
   properties:
   - type: OpenAPI
@@ -123,6 +129,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Comments
+  tags_raw:
   - comments
   properties:
   - type: OpenAPI
@@ -133,6 +141,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Digital
+  tags_raw:
   - digital
   properties:
   - type: OpenAPI
@@ -143,6 +153,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Film
+  tags_raw:
   - film
   properties:
   - type: OpenAPI
@@ -183,7 +195,8 @@ apis:
   description: The grid_filter API from Legendary Entertainment — 2 operation(s) for grid_filter.
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
-  tags:
+  tags: []
+  tags_raw:
   - grid_filter
   properties:
   - type: OpenAPI
@@ -194,6 +207,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Icons
+  tags_raw:
   - icons
   properties:
   - type: OpenAPI
@@ -214,6 +229,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Media
+  tags_raw:
   - media
   properties:
   - type: OpenAPI
@@ -224,6 +241,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Menu Items
+  tags_raw:
   - menu-items
   properties:
   - type: OpenAPI
@@ -244,6 +263,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Menus
+  tags_raw:
   - menus
   properties:
   - type: OpenAPI
@@ -254,6 +275,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Navigation
+  tags_raw:
   - navigation
   properties:
   - type: OpenAPI
@@ -264,6 +287,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Pages
+  tags_raw:
   - pages
   properties:
   - type: OpenAPI
@@ -285,6 +310,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Plugins
+  tags_raw:
   - plugins
   properties:
   - type: OpenAPI
@@ -295,6 +322,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Posts
+  tags_raw:
   - posts
   properties:
   - type: OpenAPI
@@ -305,6 +334,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Root
+  tags_raw:
   - root
   properties:
   - type: OpenAPI
@@ -315,6 +346,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Search
+  tags_raw:
   - search
   properties:
   - type: OpenAPI
@@ -325,6 +358,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Settings
+  tags_raw:
   - settings
   properties:
   - type: OpenAPI
@@ -355,6 +390,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Status
+  tags_raw:
   - statuses
   properties:
   - type: OpenAPI
@@ -365,6 +402,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Tags
+  tags_raw:
   - tags
   properties:
   - type: OpenAPI
@@ -385,6 +424,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Television
+  tags_raw:
   - television
   properties:
   - type: OpenAPI
@@ -405,6 +446,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Templates
+  tags_raw:
   - templates
   properties:
   - type: OpenAPI
@@ -415,6 +458,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Themes
+  tags_raw:
   - themes
   properties:
   - type: OpenAPI
@@ -425,6 +470,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Trailers
+  tags_raw:
   - trailers
   properties:
   - type: OpenAPI
@@ -435,6 +482,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Types
+  tags_raw:
   - types
   properties:
   - type: OpenAPI
@@ -445,6 +494,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - User
+  tags_raw:
   - users
   properties:
   - type: OpenAPI
@@ -465,6 +516,8 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
+  - Widgets
+  tags_raw:
   - widgets
   properties:
   - type: OpenAPI
@@ -475,7 +528,8 @@ apis:
     The wp_pattern_category API from Legendary Entertainment — 2 operation(s) for wp_pattern_category.
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
-  tags:
+  tags: []
+  tags_raw:
   - wp_pattern_category
   properties:
   - type: OpenAPI
