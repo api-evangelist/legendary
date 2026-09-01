@@ -129,7 +129,7 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
-  - comics
+  - Comics
   tags_raw:
   - comics
   properties:
@@ -153,7 +153,7 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
-  - digital
+  - Digital
   tags_raw:
   - digital
   properties:
@@ -165,7 +165,7 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
-  - film
+  - Film
   tags_raw:
   - film
   properties:
@@ -253,7 +253,7 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
-  - Menu Items
+  - menu-items
   tags_raw:
   - menu-items
   properties:
@@ -436,7 +436,7 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
-  - television
+  - Television
   tags_raw:
   - television
   properties:
@@ -482,7 +482,7 @@ apis:
   humanURL: https://www.legendary.com/wp-json/wp/v2
   baseURL: https://www.legendary.com/wp-json/wp/v2
   tags:
-  - trailers
+  - Trailers
   tags_raw:
   - trailers
   properties:
