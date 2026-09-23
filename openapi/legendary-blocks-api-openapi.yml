@@ -1,8 +1,8 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Legendary Entertainment WordPress REST block-directory blocks API
+  title: Legendary Entertainment WordPress REST Blocks API
   version: wp/v2
-  description: 'Read-oriented content API exposed by legendary.com: the WordPress REST API (namespace wp/v2) serving Legendary Entertainment news posts, pages, media, categories and tags. Derived by API Evangelist from the live route discovery document at https://www.legendary.com/wp-json/wp/v2 . This is the platform API exposed by the marketing site, NOT a documented first-party Legendary developer program. GET collections are publicly readable without authentication; write operations require WordPress Application Password credentials.'
+  description: 'Read-oriented content API exposed by legendary.com: the WordPress REST API (namespace wp/v2) serving Legendary Entertainment news posts, pages, media, categories and tags.'
   contact:
     name: Legendary Entertainment
     url: https://www.legendary.com/about/
@@ -10,14 +10,14 @@ servers:
 - url: https://www.legendary.com/wp-json/wp/v2
   description: Production
 tags:
-- name: blocks
+- name: Blocks
 paths:
   /blocks:
     get:
       operationId: getBlocks
       summary: GET /blocks
       tags:
-      - blocks
+      - Blocks
       parameters:
       - name: after
         in: query
@@ -201,7 +201,7 @@ paths:
       operationId: createBlocks
       summary: POST /blocks
       tags:
-      - blocks
+      - Blocks
       security:
       - applicationPassword: []
       responses:
@@ -228,7 +228,7 @@ paths:
       operationId: getBlocksById
       summary: GET /blocks/{id}
       tags:
-      - blocks
+      - Blocks
       parameters:
       - name: context
         in: query
@@ -270,7 +270,7 @@ paths:
       operationId: createBlocksById
       summary: POST /blocks/{id}
       tags:
-      - blocks
+      - Blocks
       security:
       - applicationPassword: []
       responses:
@@ -290,7 +290,7 @@ paths:
       operationId: deleteBlocksById
       summary: DELETE /blocks/{id}
       tags:
-      - blocks
+      - Blocks
       security:
       - applicationPassword: []
       responses:
@@ -317,7 +317,7 @@ paths:
       operationId: getBlocksByIdAutosaves
       summary: GET /blocks/{id}/autosaves
       tags:
-      - blocks
+      - Blocks
       parameters:
       - name: context
         in: query
@@ -353,7 +353,7 @@ paths:
       operationId: createBlocksByIdAutosaves
       summary: POST /blocks/{id}/autosaves
       tags:
-      - blocks
+      - Blocks
       security:
       - applicationPassword: []
       responses:
@@ -385,7 +385,7 @@ paths:
       operationId: getBlocksByParentAutosavesById
       summary: GET /blocks/{parent}/autosaves/{id}
       tags:
-      - blocks
+      - Blocks
       parameters:
       - name: context
         in: query
@@ -422,7 +422,7 @@ paths:
       operationId: getBlocksByParentRevisions
       summary: GET /blocks/{parent}/revisions
       tags:
-      - blocks
+      - Blocks
       parameters:
       - name: context
         in: query
@@ -528,7 +528,7 @@ paths:
       operationId: getBlocksByParentRevisionsById
       summary: GET /blocks/{parent}/revisions/{id}
       tags:
-      - blocks
+      - Blocks
       parameters:
       - name: context
         in: query
@@ -558,7 +558,7 @@ paths:
       operationId: deleteBlocksByParentRevisionsById
       summary: DELETE /blocks/{parent}/revisions/{id}
       tags:
-      - blocks
+      - Blocks
       security:
       - applicationPassword: []
       responses:

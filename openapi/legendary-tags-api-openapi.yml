@@ -1,8 +1,8 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Legendary Entertainment WordPress REST block-directory tags API
+  title: Legendary Entertainment WordPress REST Tags API
   version: wp/v2
-  description: 'Read-oriented content API exposed by legendary.com: the WordPress REST API (namespace wp/v2) serving Legendary Entertainment news posts, pages, media, categories and tags. Derived by API Evangelist from the live route discovery document at https://www.legendary.com/wp-json/wp/v2 . This is the platform API exposed by the marketing site, NOT a documented first-party Legendary developer program. GET collections are publicly readable without authentication; write operations require WordPress Application Password credentials.'
+  description: 'Read-oriented content API exposed by legendary.com: the WordPress REST API (namespace wp/v2) serving Legendary Entertainment news posts, pages, media, categories and tags.'
   contact:
     name: Legendary Entertainment
     url: https://www.legendary.com/about/
@@ -10,14 +10,14 @@ servers:
 - url: https://www.legendary.com/wp-json/wp/v2
   description: Production
 tags:
-- name: tags
+- name: Tags
 paths:
   /tags:
     get:
       operationId: getTags
       summary: GET /tags
       tags:
-      - tags
+      - Tags
       parameters:
       - name: context
         in: query
@@ -145,7 +145,7 @@ paths:
       operationId: createTags
       summary: POST /tags
       tags:
-      - tags
+      - Tags
       security:
       - applicationPassword: []
       responses:
@@ -172,7 +172,7 @@ paths:
       operationId: getTagsById
       summary: GET /tags/{id}
       tags:
-      - tags
+      - Tags
       parameters:
       - name: context
         in: query
@@ -202,7 +202,7 @@ paths:
       operationId: createTagsById
       summary: POST /tags/{id}
       tags:
-      - tags
+      - Tags
       security:
       - applicationPassword: []
       responses:
@@ -222,7 +222,7 @@ paths:
       operationId: deleteTagsById
       summary: DELETE /tags/{id}
       tags:
-      - tags
+      - Tags
       security:
       - applicationPassword: []
       responses:

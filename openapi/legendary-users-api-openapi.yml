@@ -1,8 +1,8 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Legendary Entertainment WordPress REST block-directory users API
+  title: Legendary Entertainment WordPress REST Users API
   version: wp/v2
-  description: 'Read-oriented content API exposed by legendary.com: the WordPress REST API (namespace wp/v2) serving Legendary Entertainment news posts, pages, media, categories and tags. Derived by API Evangelist from the live route discovery document at https://www.legendary.com/wp-json/wp/v2 . This is the platform API exposed by the marketing site, NOT a documented first-party Legendary developer program. GET collections are publicly readable without authentication; write operations require WordPress Application Password credentials.'
+  description: 'Read-oriented content API exposed by legendary.com: the WordPress REST API (namespace wp/v2) serving Legendary Entertainment news posts, pages, media, categories and tags.'
   contact:
     name: Legendary Entertainment
     url: https://www.legendary.com/about/
@@ -10,14 +10,14 @@ servers:
 - url: https://www.legendary.com/wp-json/wp/v2
   description: Production
 tags:
-- name: users
+- name: Users
 paths:
   /users:
     get:
       operationId: getUsers
       summary: GET /users
       tags:
-      - users
+      - Users
       parameters:
       - name: capabilities
         in: query
@@ -165,7 +165,7 @@ paths:
       operationId: createUsers
       summary: POST /users
       tags:
-      - users
+      - Users
       security:
       - applicationPassword: []
       responses:
@@ -192,7 +192,7 @@ paths:
       operationId: getUsersById
       summary: GET /users/{id}
       tags:
-      - users
+      - Users
       parameters:
       - name: context
         in: query
@@ -222,7 +222,7 @@ paths:
       operationId: createUsersById
       summary: POST /users/{id}
       tags:
-      - users
+      - Users
       security:
       - applicationPassword: []
       responses:
@@ -242,7 +242,7 @@ paths:
       operationId: deleteUsersById
       summary: DELETE /users/{id}
       tags:
-      - users
+      - Users
       security:
       - applicationPassword: []
       responses:
@@ -269,7 +269,7 @@ paths:
       operationId: getUsersByUser_Id}ApplicationPasswords
       summary: GET /users/{user_id})/application-passwords
       tags:
-      - users
+      - Users
       parameters:
       - name: context
         in: query
@@ -299,7 +299,7 @@ paths:
       operationId: createUsersByUser_Id}ApplicationPasswords
       summary: POST /users/{user_id})/application-passwords
       tags:
-      - users
+      - Users
       security:
       - applicationPassword: []
       responses:
@@ -319,7 +319,7 @@ paths:
       operationId: deleteUsersByUser_Id}ApplicationPasswords
       summary: DELETE /users/{user_id})/application-passwords
       tags:
-      - users
+      - Users
       security:
       - applicationPassword: []
       responses:
@@ -351,7 +351,7 @@ paths:
       operationId: getUsersByUser_Id}ApplicationPasswordsByUuid
       summary: GET /users/{user_id})/application-passwords/{uuid}
       tags:
-      - users
+      - Users
       parameters:
       - name: context
         in: query
@@ -381,7 +381,7 @@ paths:
       operationId: createUsersByUser_Id}ApplicationPasswordsByUuid
       summary: POST /users/{user_id})/application-passwords/{uuid}
       tags:
-      - users
+      - Users
       security:
       - applicationPassword: []
       responses:
@@ -401,7 +401,7 @@ paths:
       operationId: deleteUsersByUser_Id}ApplicationPasswordsByUuid
       summary: DELETE /users/{user_id})/application-passwords/{uuid}
       tags:
-      - users
+      - Users
       security:
       - applicationPassword: []
       responses:
@@ -428,7 +428,7 @@ paths:
       operationId: getUsersByUser_Id}ApplicationPasswordsIntrospect
       summary: GET /users/{user_id})/application-passwords/introspect
       tags:
-      - users
+      - Users
       parameters:
       - name: context
         in: query
@@ -459,7 +459,7 @@ paths:
       operationId: getUsersMe
       summary: GET /users/me
       tags:
-      - users
+      - Users
       parameters:
       - name: context
         in: query
@@ -502,7 +502,7 @@ paths:
       operationId: createUsersMe
       summary: POST /users/me
       tags:
-      - users
+      - Users
       security:
       - applicationPassword: []
       responses:
@@ -522,7 +522,7 @@ paths:
       operationId: deleteUsersMe
       summary: DELETE /users/me
       tags:
-      - users
+      - Users
       security:
       - applicationPassword: []
       responses:

@@ -1,8 +1,8 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Legendary Entertainment WordPress REST block-directory global-styles API
+  title: Legendary Entertainment WordPress REST Global Styles API
   version: wp/v2
-  description: 'Read-oriented content API exposed by legendary.com: the WordPress REST API (namespace wp/v2) serving Legendary Entertainment news posts, pages, media, categories and tags. Derived by API Evangelist from the live route discovery document at https://www.legendary.com/wp-json/wp/v2 . This is the platform API exposed by the marketing site, NOT a documented first-party Legendary developer program. GET collections are publicly readable without authentication; write operations require WordPress Application Password credentials.'
+  description: 'Read-oriented content API exposed by legendary.com: the WordPress REST API (namespace wp/v2) serving Legendary Entertainment news posts, pages, media, categories and tags.'
   contact:
     name: Legendary Entertainment
     url: https://www.legendary.com/about/
@@ -10,7 +10,7 @@ servers:
 - url: https://www.legendary.com/wp-json/wp/v2
   description: Production
 tags:
-- name: global-styles
+- name: global styles
 paths:
   /global-styles/{id}:
     parameters:
@@ -23,7 +23,7 @@ paths:
       operationId: getGlobalStylesById
       summary: GET /global-styles/{id}
       tags:
-      - global-styles
+      - global styles
       responses:
         '200':
           description: Successful response
@@ -41,7 +41,7 @@ paths:
       operationId: createGlobalStylesById
       summary: POST /global-styles/{id}
       tags:
-      - global-styles
+      - global styles
       security:
       - applicationPassword: []
       responses:
@@ -68,7 +68,7 @@ paths:
       operationId: getGlobalStylesByParentRevisions
       summary: GET /global-styles/{parent}/revisions
       tags:
-      - global-styles
+      - global styles
       parameters:
       - name: context
         in: query
@@ -129,7 +129,7 @@ paths:
       operationId: getGlobalStylesByParentRevisionsById
       summary: GET /global-styles/{parent}/revisions/{id}
       tags:
-      - global-styles
+      - global styles
       parameters:
       - name: context
         in: query
@@ -166,7 +166,7 @@ paths:
       operationId: getGlobalStylesThemesByStylesheet}\[\]\@_\-]+Variations
       summary: GET /global-styles/themes/{stylesheet}\[\]\@_\-]+)/variations
       tags:
-      - global-styles
+      - global styles
       responses:
         '200':
           description: Successful response
@@ -191,7 +191,7 @@ paths:
       operationId: getGlobalStylesThemesByStylesheet}?
       summary: GET /global-styles/themes/{stylesheet}?)
       tags:
-      - global-styles
+      - global styles
       responses:
         '200':
           description: Successful response
