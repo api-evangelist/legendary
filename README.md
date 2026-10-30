@@ -1,4 +1,4 @@
-# Legendary
+# Legendary Entertainment
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,6 +64,130 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Legendary is a company surfaced as a portfolio company of accel and added to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.
+Legendary Entertainment is a Burbank, California media company that owns, produces and distributes content to worldwide audiences across three divisions: Legendary Pictures (film), Legendary Television and Digital Media, and Legendary Comics. Its productions have grossed more than $20 billion worldwide at the box office, spanning franchises such as Dune, Godzilla and Kong, A Minecraft Movie, Street Fighter, Enola Holmes and Monarch: Legacy of Monsters, with an explicit focus on the fandom demographic. Legendary runs no public developer program and publishes no documented API. It does, however, expose a live, publicly readable WordPress REST API on legendary.com that serves its news posts and its film, television, comics, trailer and digital catalogs as JSON — captured here as a platform-exposed content API rather than a supported product.
 
-Backed by: accel — http://www.legendary.com
+**Areas:** Company · Consumer · Media · Entertainment · Film · Television · Comics · Content · Publishing · WordPress
+
+## Legendary Entertainment on APIs.io
+
+Everything profiled for Legendary Entertainment is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/legendary/](https://apis.io/providers/legendary/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Legendary Entertainment Website (WordPress REST)](https://apis.io/apis/legendary/legendary-com-website-wordpress-rest/) — The public WordPress REST API (wp-json) of the Legendary Entertainment website at www.legendary.com: the route index of the site's content management…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [legendary](https://apis.io/servers/legendary/legendary/)
+
+#### Collections (43)
+
+Postman and Open Collection request collections.
+
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-block-directory-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-block-patterns-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-block-renderer-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-block-types-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-blocks-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-categories-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-comics-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-comments-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-digital-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-film-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-font-collections-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-font-families-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-global-styles-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-grid-filter-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-icons-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-ldn-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-media-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-menu-items-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-menu-locations-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-menus-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-navigation-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-pages-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-pattern-directory-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-plugins-api/)
+- [Moved to /providers/legendary/](https://apis.io/collections/legendary/open-legendary-posts-api/)
+- …and 18 more published on APIs.io
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Legendary Wp Rest Overlay](https://apis.io/overlays/legendary/legendary-wp-rest-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Legendary Authentication](https://apis.io/security/legendary/legendary-authentication/)
+- [Legendary Domain Security](https://apis.io/security/legendary/legendary-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.legendary.com)
+- [Blog](https://www.legendary.com/latest-news/)
+- [Terms of service](https://www.legendary.com/about/terms/)
+- [Privacy policy](https://www.legendary.com/about/privacy/)
+
+## API Evangelist rating
+
+**Kin Score 17.0** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 25.6 |
+| Access clarity | 21.1 |
+
+**Agent readiness 4.1** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/legendary/](https://apis.io/providers/legendary/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Legendary Entertainment: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/legendary/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
